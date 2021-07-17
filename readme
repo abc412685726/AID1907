@@ -94,18 +94,28 @@ GIT使用(git结构)
         git log
         git log --pretty=oneline
 
-比较工作区文件和仓库文件差异
-git diff [file]
+    7.比较工作区文件和仓库文件差异
+        git diff [file]
+        e.g.
+        git diff README.md
 
-将暂存区或者某个commit点文件恢复到工作区
-git checkout [commit] -- [file]
+    8.将暂存区或者某个commit点文件恢复到工作区(从仓库区取回文件)
+        git checkout [commit] -- [file]
+        e.g.
+        git checkout --README.md
 
---是为了防止误操作，checkout还有切换分支的作用
-移动或者删除文件
-git mv [file] [path]
-git rm [files]
-注意: 这两个操作会修改工作区内容，同时将操作记录提交到暂存区。
+        e.g.
+        rm 123.jpg
+        git checkout -- 123.jpg
 
+        --是为了防止误操作，checkout还有切换分支的作用
+
+    9.移动或者删除文件
+        git mv [file] [path]
+        git rm [files]
+        注意: 这两个操作会修改工作区内容，同时将操作记录提交到暂存区。
+        e.g.
+        git mv 123.jpg Test/
 版本控制
 退回到上一个commit节点
 git reset --hard HEAD^
