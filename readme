@@ -117,9 +117,10 @@ GIT使用(git结构)
         e.g.
         git mv 123.jpg Test/
 版本控制
-退回到上一个commit节点
-git reset --hard HEAD^
-注意 ： 一个^表示回退1个版本，依次类推。当版本回退之后工作区会自动和当前commit版本保持一致
+    退回到上一个commit节点
+    git reset --hard HEAD^
+    注意 ： 一个^表示回退1个版本，依次类推。当版本回退之后工作区会自动
+           和当前commit版本保持一致
 
 退回到指定的commit_id节点
 git reset --hard [commit_id]
