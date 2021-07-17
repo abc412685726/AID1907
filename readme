@@ -64,10 +64,12 @@ GIT使用(git结构)
         e.g. 将所有文件（不包含隐藏文件）记录到暂存区
         git add  *
         git add .
+
         @扩展延伸
         在Git项目中可以通过在项目的某个文件夹下定义.gitignore文件的方式，规定相应
         的忽略规则，用来管理当前文件夹下的文件的Git提交行为。.gitignore 文件是可以
-        提交到公有仓库中，这就为该项目下的所有开发者都共享一套定义好的忽略规则。在.gitignore 文件中，遵循相应的语法，在每一行指定一个忽略规则。
+        提交到公有仓库中，这就为该项目下的所有开发者都共享一套定义好的忽略规则。在.gitignore
+        文件中，遵循相应的语法，在每一行指定一个忽略规则。
 
         .gitignore忽略规则简单说明
 
@@ -76,19 +78,19 @@ GIT使用(git结构)
         !lib.a          表示但lib.a除外
         build/          表示忽略 build/目录下的所有文件，过滤整个build文件夹；
 
-4.取消文件暂存记录
+    4.取消文件暂存记录
+        git rm --cached [file]
 
-git rm --cached [file]
-
-将文件同步到本地仓库
-git commit [file] -m [message]
-说明: -m表示添加一些同步信息，表达同步内容
-
-e.g.  将暂存区所有记录同步到仓库区
-git commit  -m 'add files'
-查看commit 日志记录
-git log
-git log --pretty=oneline
+    5.将文件同步到本地仓库
+        git commit [file] -m [message]
+        e.g.
+        git commit dict.txt -m 'add files'
+        说明: -m表示添加一些同步信息，表达同步内容
+        e.g.  将暂存区所有记录同步到仓库区
+        git commit  -m 'add files'
+    6.查看commit 日志记录
+        git log
+        git log --pretty=oneline
 
 比较工作区文件和仓库文件差异
 git diff [file]
