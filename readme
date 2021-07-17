@@ -71,13 +71,15 @@ GIT使用(git结构)
         提交到公有仓库中，这就为该项目下的所有开发者都共享一套定义好的忽略规则。在.gitignore
         文件中，遵循相应的语法，在每一行指定一个忽略规则。
 
-        .gitignore忽略规则简单说明
+        .gitignore忽略规则简单说明(新建一个文件：.gitignore)
 
         file            表示忽略file文件
         *.a             表示忽略所有 .a 结尾的文件
         !lib.a          表示但lib.a除外
         build/          表示忽略 build/目录下的所有文件，过滤整个build文件夹；
 
+        e.g.
+        新建一个文件：.gitignore   *.log
     4.取消文件暂存记录
         git rm --cached [file]
 
